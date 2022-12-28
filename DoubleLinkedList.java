@@ -2,6 +2,7 @@ package common;
 
 import java.util.Scanner;
 class Node{
+	
 	int data;
 	Node left;
 	Node right;
@@ -50,37 +51,39 @@ public class DoubleLinkedList {
 		}
 	}
 	
-	void splitList() {
-	
-		Node t = root;
-		Node t2 = root;
-		Node t3 = null;
-		
-		t = root;
-	}
-      		
-		
-/*		
-		if(root == null) {
-			System.out.println("List Empty");
-		}
-		else {
-			Node t = root;
-			
-			while(t!=null) {
-				if(t.data % 2 == 0) {
-					c++;
-					System.out.println("Node at"+c);
-					t = t.right;
-				}
-				else {
-					System.out.println("Node at"+c);
-					t = t.right;
-				}
-					
-			}
-		}
-*/
+	 void splitList() {
+		 if(root==null) {
+		    	System.out.println("List Empty");
+		 }
+		 else {
+		    	Node t =root;
+		    	System.out.println("Even: ");
+		    	
+		    	while(t!=null) {
+		    		if(t.data % 2 == 0) {
+		    			System.out.println(t.data);
+		    		}
+		    		else {
+			    	
+		    		}
+		    		t=t.right;
+		    	}
+		    
+		    	t=root;
+		    	System.out.println("Odd: ");
+		    	
+		    	while(t!=null) {  
+		    		if(t.data % 2 != 0) {
+		    			System.out.println(t.data);
+		    		}
+		    		else {
+			   
+		    		}
+		    		t=t.right;
+		    	}
+		   }
+	 }
+
 	
 	public static void main(String[] args) {
 		int data;
@@ -92,7 +95,7 @@ public class DoubleLinkedList {
 		obj.createList();
 		
 		do {
-			System.out.println("1: InsertRight 2:PrintTraverse 3: SplitList 0: Exit");
+			System.out.println("Enter choice: 1.InsertRight 2.PrintTraverse 3.PrintList 0: Exit");
 			choice = sc.nextInt();
 			
 			switch(choice) {
